@@ -166,10 +166,23 @@ console.log(appleIndex(['orange', 'grape', 'apple', 'banana', 'mango']));
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-// function isItAnApple(['']) {
-//   /* code here */
-// }
+function isItAnApple(fruits) {
 
+  let myArray = [];
+
+    for (let i = 0; i < fruits.length; i++){
+      if (fruits[i] === 'apple') {
+        myArray.push(true);
+     } else {
+      myArray.push(false);
+     }
+    }
+
+    return myArray;
+
+}
+
+console.log(isItAnApple([ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]));
 
 
 
@@ -210,7 +223,6 @@ function get3rdCar(inventory) {
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 
-
 /**
  * ### Challenge `getCarInfoByIndex`
  * 
@@ -224,8 +236,11 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  const theCar = inventory[index];
+  return `This is a ${theCar.car_make} ${theCar.car_model}`
 }
+
+console.log(getCarInfoByIndex(inventory,0))
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -324,4 +339,3 @@ function getGermanCars(/* code here */) {
 function carMaker(/* code here */) {
   /* code here */
 }
-
